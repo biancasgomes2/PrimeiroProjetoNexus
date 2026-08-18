@@ -1,0 +1,10 @@
+1- barra de cima (falta decorar)
+2- área principal (feito)
+3- botão (feito)
+4- área cinza atras da principal (feito)
+5- outra área principal
+6- """botões"""
+7- área importante
+8- rodapé laranja
+	8.1 Botão branco
+9- rodapé preto
