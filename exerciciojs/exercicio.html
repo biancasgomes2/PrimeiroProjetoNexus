@@ -25,8 +25,10 @@
     botao.addEventListener('click', () => {
         if(texto.textContent=="Este é o texto original."){
             texto.textContent = "Este é o texto modificado.";
+            botao.textContent = "Retornar ao original"
         }else{
             texto.textContent = "Este é o texto original."
+            botao.textContent = "Mudar texto"
         }
     })
 
