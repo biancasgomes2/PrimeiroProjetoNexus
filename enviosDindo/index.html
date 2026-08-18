@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula Javascript</title>
+    <style>
+        .elemento {
+            background-color: #00ffff;
+            margin: 100px auto;
+        }
+
+        .escondido{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div style="text-align: center; margin-top: 150px;">
+        <h1 class="numero">0</h1>
+        <button id="increment">+</button>
+        <button id="decrement">-</button>  
+    </div>
+
+    <div class="elemento" style="width: 200px; height: 200px">
+    </div>
+    <button class="esconder">Esconder</button>
+
+</body>
+
+
+<script>
+    const numeroElement = document.querySelector('.numero');
+    const incrementButton = document.getElementById('increment');
+    const decrementButton = document.getElementById('decrement');
+
+    let numero = 0;
+
+    incrementButton.addEventListener('click', () => {
+        numero++;
+        numeroElement.textContent = numero;
+    });
+
+    decrementButton.addEventListener('click', () => {
+        numero--;
+        numeroElement.textContent = numero;
+    });
+
+
+    const button = document.querySelector('.esconder');
+    const caixa = document.querySelector('.elemento');
+
+    button.addEventListener('click', () => {
+        caixa.classList.toggle('escondido')
+
+        if (caixa.classList.contains('escondido')) {
+            button.textContent = "Mostrar"
+        }else{
+            button.textContent = "Esconder" 
+        }
+    })    
+
+</script>
+</html>
