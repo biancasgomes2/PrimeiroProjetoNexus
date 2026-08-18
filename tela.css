@@ -33,7 +33,11 @@ a{
     background-image: linear-gradient(90deg, #f55c03, #ffd000);
     border-radius: 25px;
     padding-right: 30px;
-
+}
+@media(max-width: 768px){
+    .espacofoto{
+        display: none;
+    }
 }
 
 .principal{
