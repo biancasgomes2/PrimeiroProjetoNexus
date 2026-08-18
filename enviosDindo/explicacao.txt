@@ -1,0 +1,28 @@
+**O que é a tarefa**
+
+Pegar a landing page da Bloom Studio que você fez na aula 1 e fazer o menu funcionar no celular: quando a tela for pequena, os links de navegação somem e aparece um ícone ☰ no lugar. Ao clicar no ícone, a lista de links abre; ao clicar de novo, fecha.
+
+Na pasta `enviosDindo` tem dois prints — `print-menu-fechado.png` e `print-menu-aberto.png`. É exatamente esse resultado que você tem que reproduzir.
+
+**Por onde começar**
+
+1. Copie os arquivos da aula 1 (`index.html` e `style.css`) para a pasta da aula 3 e crie um `script.js` novo. Não esqueça de linkar o JS no final do HTML.
+
+2. **No HTML:** você vai precisar de um botão novo com o ícone ☰ dentro do cabeçalho. E como o JavaScript precisa "achar" tanto esse botão quanto a lista de links, os dois precisam de um jeito de serem identificados — lembra do `id` que a gente usou nos exercícios da aula 2?
+
+3. **No CSS:** aqui está a maior parte do trabalho. Você precisa de uma media query para telas pequenas (tipo até 768px) e, dentro dela:
+   - esconder a lista de links (ela só aparece quando o menu for aberto);
+   - fazer o botão ☰ aparecer (no desktop ele fica escondido);
+   - criar uma classe separada — algo como `menu-aberto` — que faz a lista voltar a aparecer, empilhada na vertical, logo abaixo do cabeçalho.
+
+   Essa classe **não fica no HTML**. Ela só existe no CSS esperando o JavaScript colocar e tirar.
+
+4. **No JavaScript:** é a mesma lógica do exercício 4 da aula 2 (mostrar/esconder). Você seleciona o botão e a lista, escuta o clique no botão e liga/desliga aquela classe do passo 3 com `classList.toggle()`. Só isso — o JS não mexe em `display`, quem cuida da aparência é o CSS.
+
+5. **Bônus (faz diferença na experiência):** trocar o ícone de ☰ para ✕ quando o menu estiver aberto, pro usuário entender que aquele botão agora fecha.
+
+**Como testar**
+
+Abre a página no navegador, aperta F12 e ativa o modo responsivo (o ícone de celular no canto). Diminui a largura até o menu virar o ☰ e testa abrir e fechar. Confere se no desktop tudo continua igual estava na aula 1 — o ☰ não pode aparecer lá.
+
+**Dica:** faz uma coisa de cada vez e testa. Primeiro só o botão aparecendo/sumindo no CSS, depois o menu escondido, e só no fim o JavaScript. Se travar em alguma parte, me chama.
