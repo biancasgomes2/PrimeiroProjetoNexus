@@ -4,19 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercício de JavaScript</title>
-    <link rel="stylesheet" href="/exerciciojs/exercio.css">
+    <link rel="stylesheet" href="/exerciciojs/exercicio.css">
 </head>
 <body>
-    <div class="exercicio1">
-        <span class="titulo">Exercício 1</span>
-        <h2>Trocar o texto</h2>
-        <p>Clique no botão e faça o texto abaixo mudar.</p>
-        <div class="button">
-            <h2 class="textoModificado">Este é o texto original</h2>
-            <button type="button" class="botao">Mudar texto</button>
+    <div class="center">
+        <div class="exercicio1">
+            <span class="titulo">Exercício 1</span>
+            <h2>Trocar o texto</h2>
+            <p>Clique no botão e faça o texto abaixo mudar.</p>
+            <div class="button">
+                <h2 class="textoModificado">Este é o texto original.</h2>
+                <button type="button" class="botao">Mudar texto</button>
+            </div>
         </div>
+
+        <div class="exercicio1">
+            <span class="titulo">Exercício 2</span>
+            <h2>Trocar cor</h2>
+            <p>Clique no botão e faça a caixa abaixo mudar de cor</p>
+            <div class="button">
+                <h2 class="red cinza"></h2>
+                <button type="button" class="botao2">Mudar cor</button>
+            </div>
         </div>
+
+        <div class="exercicio1">
+            <span class="titulo">Exercício 3</span>
+            <h2>Contador</h2>
+            <p>Use os botões para aumentar ou diminuir o número.</p>
+            <div class="button">
+                <h2 class="numero">0</h2>
+                <button type="button" class="botaoA">+1</button>
+                <button type="button" class="botaoB">-1</button>
+            </div>
+        </div>
+
+         <div class="exercicio1">
+            <span class="titulo">Exercício 4</span>
+            <h2>Mostrar / esconder</h2>
+            <p>Clique no botão para mostrar ou esconder o parágrafo abaixo.</p>
+            <div class="button">
+                <h2 class="verMais escondido">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia magni non delectus aut officia magnam! Quam aut veritatis, tenetur repellendus voluptate quibusdam necessitatibus doloribus mollitia beatae. Quas eos adipisci placeat.</h2>
+                <button type="button" class="botaoAparecer">Ver mais</button>
+            </div>
+        </div>
+
     </div>
+    
+
+
+    <!-- js abaixo -->
 
     <script>
     const botao = document.querySelector('.botao');
@@ -30,9 +67,45 @@
             texto.textContent = "Este é o texto original."
             botao.textContent = "Mudar texto"
         }
-    })
+    });
 
-</script>
+    const red = document.querySelector('.red');
+    const botao2 = document.querySelector('.botao2');
+
+    botao2.addEventListener('click', () => {
+        red.classList.toggle('cinza');
+    });
+
+    const numeroAdicionado = document.querySelector('.numero');
+    const botaoAdicionar = document.querySelector('.botaoA');
+    const botaoDiminuir = document.querySelector('.botaoB');
+
+    let numero = 0;
+
+    botaoAdicionar.addEventListener('click', () => {
+        numero++
+        numeroAdicionado.textContent = numero;
+    });
+
+    botaoDiminuir.addEventListener('click', () => {
+        numero--
+        numeroAdicionado.textContent = numero;
+    });
+
+    const textoAdicionado = document.querySelector('.verMais');
+    const botaoM = document.querySelector('.botaoAparecer');
+
+    botaoM.addEventListener('click', () => {
+        textoAdicionado.classList.toggle('escondido');
+
+        if(textoAdicionado.classList.contains('escondido')){
+            botaoM.textContent = "Ver mais";
+        }else{
+            botaoM.textContent = "Ver menos";
+        }
+    });
+
+</script>   
 
 </body>
 
