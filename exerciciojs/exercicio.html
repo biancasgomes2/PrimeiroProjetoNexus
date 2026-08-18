@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício de JavaScript</title>
+    <link rel="stylesheet" href="/exerciciojs/exercio.css">
+</head>
+<body>
+    <div class="exercicio1">
+        <span class="titulo">Exercício 1</span>
+        <h2>Trocar o texto</h2>
+        <p>Clique no botão e faça o texto abaixo mudar.</p>
+        <div class="button">
+            <h2 class="textoModificado">Este é o texto original</h2>
+            <button type="button" class="botao">Mudar texto</button>
+        </div>
+        </div>
+    </div>
+
+    <script>
+    const botao = document.querySelector('.botao');
+    const texto = document.querySelector('.textoModificado');
+
+    botao.addEventListener('click', () => {
+        if(texto.textContent=="Este é o texto original."){
+            texto.textContent = "Este é o texto modificado.";
+        }else{
+            texto.textContent = "Este é o texto original."
+        }
+    })
+
+</script>
+
+</body>
+
+</html>
