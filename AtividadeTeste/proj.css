@@ -1,0 +1,14 @@
+.teste{
+    width: 50px;
+    height: 50px;
+    background-color: gray;
+
+}
+
+@media(max-width: 768px){
+    .teste{
+        width: 100px;
+        height: 100px;
+        background-color: red;
+    }
+}
