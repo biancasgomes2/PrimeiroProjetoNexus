@@ -1,12 +1,12 @@
-const botaoGeral = document.querySelector('#geral');
-const abas = document.querySelector('#a');
+const linksEscondido = document.querySelector('.links-mobile')
+const botaoT = document.querySelector('.tracinhos')
 
-    botaoGeral.addEventListener('click', () => {
-        abas.classList.toggle('escondido');
+    botaoT.addEventListener('click', () => {
+        linksEscondido.classList.toggle('escondido');
 
-        if(botaoGeral.classList.contains('escondido')){
-            botaoGeral.textContent = abas;
+        if(linksEscondido.classList.contains("escondido")){
+            botaoT.textContent = "☰"
         }else{
-            botaoGeral.textContent = abas;
+            botaoT.textContent = "✕"
         }
     });
